@@ -6,7 +6,7 @@ import {Observable} from 'rxjs/Observable';
 export class SitesHotspotService {
 
 
-    url = 'http://api.bandsintown.com/events/search?api_version=2.0&app_id=mon_app&location=la%20rochelle,france&radius=10&format=json&page=1&per_page=4;';
+    url = 'http://parisdata.opendatasoft.com/api/records/1.0/download?dataset=liste_des_sites_des_hotspots_paris_wifi&format=json;';
 
     constructor(private http: HttpClient) {
     }
