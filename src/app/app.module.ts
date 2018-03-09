@@ -5,21 +5,26 @@ import {AppRoutingModule} from './app-routing.module';
 
 import {AppComponent} from './app.component';
 import {HotspotsComponent} from './hotspots/hotspots.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientJsonpModule, HttpClientModule} from '@angular/common/http';
 import {SitesHotspotService} from './services/sites-hotspot.service';
+import { ConcertsComponent } from './concerts/concerts.component';
+import {ConcertService} from './services/concert.service';
 
 @NgModule({
     declarations: [
         AppComponent,
-        HotspotsComponent
+        HotspotsComponent,
+        ConcertsComponent
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
-        HttpClientModule
+        HttpClientModule,
+        HttpClientJsonpModule
     ],
     providers: [
-        SitesHotspotService
+        SitesHotspotService,
+        ConcertService
     ],
     bootstrap: [AppComponent]
 })

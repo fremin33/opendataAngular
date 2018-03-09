@@ -1,0 +1,10 @@
+<body>
+
+<ul>
+    <li *ngFor="let concert of lesConcerts$ | async">
+        <ng-container *ngFor="let artist of concert.artists">
+            <li> {{ artist.name }}</li>
+        </ng-container>
+    </li>
+</ul>
+</body>
